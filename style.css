@@ -389,80 +389,145 @@ font-size:.95rem;
 
 .navbar{
 
-position:sticky;
+    position:sticky;
 
-top:0;
+    top:0;
 
-z-index:1000;
+    z-index:1000;
 
-background:white;
+    background:white;
 
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 
 }
+
 
 .navbar .container{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
+
+    width:100%;
 
 }
+
 
 .navbar ul{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:8px;
+    justify-content:center;
 
-flex-wrap:wrap;
+    gap:8px;
 
-padding:14px 0;
+    padding:14px 0;
+
+    margin:0;
+
+    list-style:none;
+
+    flex-wrap:nowrap;
 
 }
+
 
 .navbar li{
 
-list-style:none;
+    list-style:none;
+
+    flex-shrink:0;
 
 }
+
 
 .navbar a{
 
-display:block;
+    display:block;
 
-padding:12px 18px;
+    padding:12px 18px;
 
-border-radius:50px;
+    border-radius:50px;
 
-font-weight:600;
+    font-weight:600;
 
-transition:.3s;
+    transition:.3s;
 
-color:#444;
+    color:#444;
+
+    text-decoration:none;
+
+    white-space:nowrap;
 
 }
+
 
 .navbar a:hover{
 
-background:var(--light);
+    background:var(--light);
 
-color:var(--primary);
+    color:var(--primary);
 
 }
+
 
 .navbar a.active{
 
-background:var(--primary);
+    background:var(--primary);
 
-color:white;
+    color:white;
 
 }
 
+
+/* =====================================================
+   NAVBAR - MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .navbar .container{
+
+        justify-content:flex-start;
+
+        overflow-x:auto;
+
+        scrollbar-width:none;
+
+    }
+
+
+    .navbar .container::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    .navbar ul{
+
+        justify-content:flex-start;
+
+        width:max-content;
+
+        padding:12px 15px;
+
+    }
+
+
+    .navbar a{
+
+        padding:10px 16px;
+
+        font-size:14px;
+
+    }
+
+}
 
 /* =====================================================
    PAGE BANNER
